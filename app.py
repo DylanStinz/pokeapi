@@ -13,7 +13,7 @@ def index():
 @app.route("/search", methods=["POST"])
 def search():
     pokemon_name = request.form.get("pokemon_name", "").strip().lower()
- 
+
     if not pokemon_name:
         flash("Por favor, ingresa el nombre de un Pokémon.", "error")
         return redirect(url_for("index"))
